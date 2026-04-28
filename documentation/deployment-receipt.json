@@ -1,0 +1,36 @@
+
+[
+{
+
+
+  "fqdns": "",
+  "id": "/subscriptions/959c8133-3755-4246-8b5a-23aa88e14c4d/resourceGroups/Portfolio-Networking-West/providers/Microsoft.Compute/virtualMachines/Web-Server-01",
+  "location": "westus2",
+  "macAddress": "7C-ED-8D-B8-91-D4",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.1.4",
+  "publicIpAddress": "20.69.105.44",
+  "resourceGroup": "Portfolio-Networking-West"
+},
+
+{
+  "access": "Allow",
+  "destinationAddressPrefix": "*",
+  "destinationAddressPrefixes": [],
+  "destinationPortRange": "80",
+  "destinationPortRanges": [],
+  "direction": "Inbound",
+  "etag": "W/\"b77b5b6d-9b07-4443-9630-11db3e35b36a\"",
+  "id": "/subscriptions/959c8133-3755-4246-8b5a-23aa88e14c4d/resourceGroups/Portfolio-Networking-West/providers/Microsoft.Network/networkSecurityGroups/Server-NSG/securityRules/AllowHTTP",
+  "name": "AllowHTTP",
+  "priority": 1010,
+  "protocol": "Tcp",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "Portfolio-Networking-West",
+  "sourceAddressPrefix": "*",
+  "sourceAddressPrefixes": [],
+  "sourcePortRange": "*",
+  "sourcePortRanges": [],
+  "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+}
+]
