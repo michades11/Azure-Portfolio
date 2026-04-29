@@ -1,0 +1,9 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - nginx
+
+runcmd:
+  - systemctl start nginx
+  - systemctl enable nginx
+  - [ sh, -c, "echo '<h1>Welcome to Lab 02: Automated by Seyi</h1>' > /var/www/html/index.html" ]
