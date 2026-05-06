@@ -1,0 +1,26 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - nginx
+
+# Phase 1: Prepare the 10GB Managed Disk
+fs_setup:
+  - device: /dev/sdc
+    partition: auto
+    filesystem: ext4
+    overwrite: false
+
+# Phase 2: Create the folder and Mount the disk
+mounts:
+  - [ /dev/sdc1, /var/www/html/data, "ext4", "defaults,nofail", "0", "2" ]
+
+# Phase 3: The "Interior Decoration" (The Fixes)
+runcmd:
+  - mkdir -p /var/www/html/data
+  # Remove the default Ubuntu Nginx page so it doesn't block ours
+  - rm -f /var/www/html/index.nginx-debian.html
+  # Create our custom High Availability message
+  - echo "<h1>High Availability Server - $(hostname)</h1>" > /var/www/html/index.html
+  # Ensure Nginx is healthy and starts on boot
+  - systemctl restart nginx
+  - systemctl enable nginx
