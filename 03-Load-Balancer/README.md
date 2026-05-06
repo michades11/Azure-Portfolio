@@ -17,4 +17,3 @@ In this lab, I moved beyond standalone VMs to build a resilient, load-balanced i
 ### 🧪 The Failover Test
 To prove the "High Availability" of this system, I manually stopped **Web-VM-1** via the Azure Portal. The Load Balancer Health Probe detected the failure and immediately shifted all incoming traffic to **Web-VM-2** with zero downtime for the user.
 
-c:\Users\Seyi\Desktop\visualization.jpg
