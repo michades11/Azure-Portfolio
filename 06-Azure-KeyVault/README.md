@@ -18,5 +18,4 @@ During deployment via automated Bash scripting, an asynchronous race condition w
 The application successfully authenticated against the Key Vault data plane and retrieved the target credential dynamically:
 
 > **Retrieved Secret Value:** `SecureSeyi2026!`
-### 📸 Proof of Deployment
-![Successful Key Vault Retrieval](./verification.png)
+
