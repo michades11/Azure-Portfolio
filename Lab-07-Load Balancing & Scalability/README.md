@@ -1398,3 +1398,5 @@ echo "✅ Lab 07 Infrastructure Components Successfully Codified!"
 Dedicated Subnet Constraints: Reconfirmed that Azure mandates a completely isolated subnet (AppGatewaySubnet) for the Application Gateway instance; no other compute resources or VMs can occupy this subnet space.
 
 Layer 4 vs. Layer 7 Disconnection: Unlike a standard network Load Balancer (Layer 4) which simply forwards packets, the Application Gateway (Layer 7) acts as a reverse proxy, terminating the client connection and initiating a clean internal handshake with the backend pool.
+
+
